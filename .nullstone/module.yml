@@ -1,0 +1,17 @@
+org_name: nullstone
+name: k8s-cron-trigger
+friendly_name: Kubernetes Cron Trigger
+description: Nullstone capability to trigger a Kubernetes job using a cron schedule
+category: capability
+subcategory: events
+provider_types:
+    - aws
+    - gcp
+    - azure
+platform: k8s
+subplatform: ""
+type: ""
+appCategories:
+    - container
+is_public: true
+tool_name: terraform
