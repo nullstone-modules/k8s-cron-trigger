@@ -1,7 +1,7 @@
 output "cron_jobs" {
   value = [
     {
-      name                          = "${local.app_name}-cron-${random_string.resource_suffix.result}"
+      name                          = "${local.app_name}-cron"
       labels                        = local.k8s_labels
       schedule                      = var.schedule
       concurrency_policy            = "Allow"
