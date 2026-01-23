@@ -8,7 +8,7 @@ output "cron_jobs" {
       suspend                       = false
       failed_jobs_history_limit     = 1
       successful_jobs_history_limit = 3
-      timezone                      = "Etc/UTC"
+      timezone                      = var.timezone
       starting_deadline_seconds     = 0
     }
   ]
