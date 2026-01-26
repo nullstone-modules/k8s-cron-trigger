@@ -31,3 +31,12 @@ For a list of valid time zones, refer to the "TZ identifer" column at https://en
 Examples: "America/New_York", "Asia/Tokyo", "Europe/London", "Etc/UTC", etc.
 EOF
 }
+
+variable "ttl_after_finished" {
+  type        = number
+  default     = 86400 // 24 * 60 * 60 = 24 hours
+  description = <<EOF
+The number of seconds after a Job (a single execution) finishes before it is deleted from the cluster.
+After this time, the cluster deletes the Job's history and logs.
+EOF
+}

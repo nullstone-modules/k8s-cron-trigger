@@ -10,6 +10,7 @@ output "cron_jobs" {
       successful_jobs_history_limit = 3
       timezone                      = var.timezone
       starting_deadline_seconds     = 0
+      ttl_seconds_after_finished    = var.ttl_after_finished
     }
   ]
 }
