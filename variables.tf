@@ -40,3 +40,27 @@ The number of seconds after a Job (a single execution) finishes before it is del
 After this time, the cluster deletes the Job's history and logs.
 EOF
 }
+
+variable "successful_history" {
+  type        = number
+  default     = 3
+  description = <<EOF
+This specifies the number of successful finished jobs to keep.
+The default value is 3.
+Setting this field to 0 will not keep any successful jobs.
+
+See https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/#jobs-history-limits
+EOF
+}
+
+variable "failed_history" {
+  type        = number
+  default     = 1
+  description = <<EOF
+This specifies the number of failed finished jobs to keep.
+The default value is 1.
+Setting this field to 0 will not keep any failed jobs.
+
+See https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/#jobs-history-limits
+EOF
+}

@@ -6,8 +6,8 @@ output "cron_jobs" {
       schedule                      = var.schedule
       concurrency_policy            = "Allow"
       suspend                       = false
-      failed_jobs_history_limit     = 1
-      successful_jobs_history_limit = 3
+      failed_jobs_history_limit     = var.failed_history
+      successful_jobs_history_limit = var.successful_history
       timezone                      = var.timezone
       starting_deadline_seconds     = 0
       ttl_seconds_after_finished    = var.ttl_after_finished
