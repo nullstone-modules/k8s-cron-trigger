@@ -32,5 +32,6 @@ locals {
     "app.kubernetes.io/managed-by" = "nullstone"
     // nullstone labels
     "nullstone.io/block" = local.app_name
+    "nullstone.io/app" = local.app_name
   }, local.match_labels)
 }
