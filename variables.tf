@@ -8,6 +8,15 @@ EOF
   default = {}
 }
 
+variable "enabled" {
+  type        = bool
+  default     = true
+  description = <<EOF
+When set to false, the CronJob is suspended and will not trigger new jobs.
+Existing running jobs are not affected.
+EOF
+}
+
 variable "schedule" {
   type        = string
   default     = "@daily"

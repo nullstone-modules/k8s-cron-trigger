@@ -5,7 +5,7 @@ output "cron_jobs" {
       labels                        = local.k8s_labels
       schedule                      = var.schedule
       concurrency_policy            = "Allow"
-      suspend                       = false
+      suspend                       = !var.enabled
       failed_jobs_history_limit     = var.failed_history
       successful_jobs_history_limit = var.successful_history
       timezone                      = var.timezone
